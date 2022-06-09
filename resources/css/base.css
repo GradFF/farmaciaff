@@ -1,0 +1,14 @@
+button:focus {
+    @apply outline-none;
+}
+
+
+/* Link */
+
+.link {
+    @apply text-purple-500 transition-colors duration-100;
+}
+
+.link:hover {
+    @apply text-purple-700;
+}

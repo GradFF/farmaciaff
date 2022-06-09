@@ -17,6 +17,6 @@ mix.js('resources/js/app.js', 'public/js')
     .vue({ runtimeOnly: (process.env.NODE_ENV || 'production') === 'production' })
     .webpackConfig(webpackConfig)
     .postCss('resources/css/app.css', 'public/css', [
-        //
+        require("tailwindcss"),
     ]).version()
     .sourceMaps()

@@ -1,6 +1,7 @@
 <template>
   <Head title="Dashboard" />
-  <div>
+
+  <div class="text-3xl font-bold underline">
     <h1>This is an Inartia Home Page</h1>
   </div>
 </template>
