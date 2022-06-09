@@ -1,4 +1,6 @@
+const process = require('process')
 const mix = require('laravel-mix');
+const webpackConfig = require('./WebpackConfig')
 
 /*
  |--------------------------------------------------------------------------
@@ -12,6 +14,9 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/app.js', 'public/js')
+    .vue({ runtimeOnly: (process.env.NODE_ENV || 'production') === 'production' })
+    .webpackConfig(webpackConfig)
     .postCss('resources/css/app.css', 'public/css', [
         //
-    ]);
+    ]).version()
+    .sourceMaps()
